@@ -1,2 +1,5 @@
 #1/bin/bash
-groups=$(id -Gn $whoami)
+user=$(whoami)
+groups(id -Gn $user)
+echo "$user $groups"
+
