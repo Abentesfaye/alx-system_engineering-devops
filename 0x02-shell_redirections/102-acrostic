@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Store the input file name
+input_file=$1
+
+# Initialize the decoded message
+decoded_message=""
+
+# Loop through each line of the input file
+while read line; do
+  # Add the first character of the line to the decoded message
+  decoded_message="$decoded_message${line:0:1}"
+done < "$input_file"
+
+# Print the decoded message
+echo "$decoded_message"
+
